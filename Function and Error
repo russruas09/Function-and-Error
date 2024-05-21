@@ -8,11 +8,6 @@ contract RFIDCard {
     event FundsLoaded(address user, uint256 amount);
     event PaymentMade(address user, uint256 amount);
 
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Only owner can perform this action");
-        _;
-    }
-
     constructor() {
         owner = msg.sender;
     }
